@@ -1,6 +1,7 @@
 {
     "name": "Dylym taxi",
     "short_name": "Taxi",
+    "description": "Taxi hailing app in Dilym",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",
