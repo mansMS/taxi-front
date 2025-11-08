@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import viteLogo from '/icon-192x192.png'
 import './App.css'
 
 function App() {
