@@ -35,21 +35,27 @@ function App() {
   }
 
   const updateSelectedDrivers = (e) => {
-    const options = [...e.target.selectedOptions]
-    const driverIds = options.map(option => option.value)
-    // if (driverIds.length > 1) debugger;
-    // debugger;
-    // if (driverIds.includes(String(allOption.id))) {
-    //   setSelectedDriverIds(driversFinalList.map(driver => String(driver.id)))
-    // } else {
-    setSelectedDriverIds(driverIds)
-    // }
+    const allOptionId = String(allOption.id);
+    const selectedOptions = [...e.target.selectedOptions]
+    const newSelectedDriverIds = selectedOptions.map(option => option.value)
+    const allWasChoosen = selectedDriverIds.includes(allOptionId);
+    const allChoosenNow = newSelectedDriverIds.includes(allOptionId);
 
+    if (allWasChoosen) {
+      if (!allChoosenNow) {
+        setSelectedDriverIds([])
+      } else {
+        setSelectedDriverIds(newSelectedDriverIds.filter(id => id !== allOptionId))
+      }
+    } else if (allChoosenNow) {
+      setSelectedDriverIds(driversFinalList.map(driver => String(driver.id)))
+    } else {
+      setSelectedDriverIds(newSelectedDriverIds)
+    }
   }
 
   const selectedDrivers = driversFinalList.filter(driver => selectedDriverIds.includes(String(driver.id)))
   const selectedDriverLabels = selectedDrivers.map(driver => driver.label)
-
 
   return (
     <div>
@@ -65,7 +71,7 @@ function App() {
       <div>
         <div>From route: <span>{fromRoute}</span></div>
         <div>Driver ids: <span>{selectedDriverIds}</span></div>
-        <div>Driver: {selectedDriverLabels.map(label => <div>{label}</div>)}</div>
+        <div>Driver: {selectedDriverLabels.map((label, index) => <div key={index}>{label}</div>)}</div>
       </div>
     </div>
   )
