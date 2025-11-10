@@ -90,7 +90,7 @@ html {
 }
 
 body {
-  /* height: 100%; */
+  height: 100%;
   position: relative;
   margin: 0;
   background-color: rgba(0, 51, 255, 0.603);
