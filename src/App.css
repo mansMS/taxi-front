@@ -52,14 +52,14 @@
     height: 100%;
 
     div:not(.qwe) {
-      background-color: yellow;
+      background-color: rgba(98, 255, 0, 0.315);
     }
   }
 }
 
 .qwe {
   width: 20px;
-  position: fixed;
+  position: absolute;
 }
 
 .qwe1 {
