@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -74,4 +74,18 @@ button:focus-visible {
 
 div {
   padding: 10px;
+} */
+
+/* html {
+  min-height: calc(100% + env(safe-area-inset-top));
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  background-attachment: fixed;
+  background-image: url('/public/favicon-96x96.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+body {
+  margin: 0;
 }
