@@ -59,7 +59,10 @@ function App() {
 
   return (
     <div>
-      <div className='qwe'></div>
+      <div className='qwe qwe1'></div>
+      <div className='qwe qwe2'></div>
+      <div className='qwe qwe3'></div>
+      <div className='qwe qwe4'></div>
       <div>
         <span >Откуда:</span> <input value={fromRoute} onChange={updateFromRoute} /> <span>*</span>
       </div>
