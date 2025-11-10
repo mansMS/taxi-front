@@ -58,7 +58,7 @@ function App() {
   const selectedDriverLabels = selectedDrivers.map(driver => driver.label)
 
   return (
-    <div>
+    <div className='App'>
       <div className='qwe qwe1'></div>
       <div className='qwe qwe2'></div>
       <div className='qwe qwe3'></div>

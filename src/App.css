@@ -41,6 +41,12 @@
   color: #888;
 } */
 
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .qwe {
   width: 20px;
   position: fixed;
