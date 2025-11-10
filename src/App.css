@@ -40,3 +40,16 @@
 .read-the-docs {
   color: #888;
 } */
+
+.qwe {
+  width: 20px;
+  height: env(safe-area-inset-top);
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+#root {
+  margin: 0;
+  background-color: yellow;
+}
