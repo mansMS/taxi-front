@@ -63,6 +63,8 @@ function App() {
       <div className='qwe qwe2'></div>
       <div className='qwe qwe3'></div>
       <div className='qwe qwe4'></div>
+      <div className='qwe qwe5'></div>
+      <div className='qwe qwe6'></div>
       <div>
         <span >Откуда:</span> <input value={fromRoute} onChange={updateFromRoute} /> <span>*</span>
       </div>

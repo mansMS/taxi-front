@@ -63,12 +63,14 @@
 }
 
 .qwe1,
-.qwe3 {
+.qwe3,
+.qwe5 {
   position: fixed;
 }
 
 .qwe2,
-.qwe4 {
+.qwe4,
+.qwe6 {
   position: absolute;
 }
 
@@ -98,4 +100,18 @@
   bottom: 0;
   right: 30px;
   background-color: rgb(255, 52, 181);
+}
+
+.qwe5 {
+  height: env(safe-area-inset-top);
+  top: -20px;
+  right: 60px;
+  background-color: rgb(223, 215, 220);
+}
+
+.qwe6 {
+  height: env(safe-area-inset-bottom);
+  bottom: 0px;
+  right: 60px;
+  background-color: rgb(238, 255, 0);
 }
