@@ -3,7 +3,7 @@
     "short_name": "Taxi",
     "description": "Taxi hailing app in Dilym",
     "start_url": "/",
-    "display": "standalone",
+    "display": "fullscreen",
     "background_color": "#555555",
     "theme_color": "#b4b4b4",
     "icons": [

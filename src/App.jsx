@@ -60,7 +60,7 @@ function App() {
   return (
     <div className='App'>
       <div className='qwe qwe1 qwe'>1</div>
-      <div className='qwe qwe2'></div>
+      <div className='qwe qwe2'>2</div>
       <div className='qwe qwe3'></div>
       <div className='qwe qwe4'></div>
       <div className='qwe qwe5'></div>
