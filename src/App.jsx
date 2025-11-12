@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
-function App() {
+const App = () => {
   const [fromRoute, setFromRoute] = useState('')
   const [selectedDriverIds, setSelectedDriverIds] = useState([])
 
@@ -59,6 +59,10 @@ function App() {
 
   console.log('window.visualViewport', window.visualViewport)
   const top_indent = getComputedStyle(document.documentElement).getPropertyValue("--top-indent");
+
+  useEffect(() => {
+    document.body.style.height = `${window.visualViewport?.height}px`;
+  }, []);
 
 
   return (
