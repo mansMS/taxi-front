@@ -65,15 +65,15 @@
 
 .qwe1 {
   height: env(safe-area-inset-top);
-  top: 0;
-  right: 0;
+  top: 100px;
+  right: 40px;
   background-color: red;
 }
 
 .qwe2 {
   height: env(safe-area-inset-top);
-  top: 100%;
-  right: 20px;
+  bottom: 0;
+  right: 40px;
   background-color: green;
 }
 
