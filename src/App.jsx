@@ -57,6 +57,10 @@ function App() {
   const selectedDrivers = driversFinalList.filter(driver => selectedDriverIds.includes(String(driver.id)))
   const selectedDriverLabels = selectedDrivers.map(driver => driver.label)
 
+  console.log('window.visualViewport', window.visualViewport)
+  const top_indent = getComputedStyle(document.documentElement).getPropertyValue("--top-indent");
+
+
   return (
     <div className='App'>
       <div className='qwe qwe1'></div>
@@ -64,6 +68,18 @@ function App() {
       <div>
         <span >Откуда:</span> <input value={fromRoute} onChange={updateFromRoute} /> <span>*</span>
       </div>
+      <div>top_indent {top_indent}</div>
+      <div>visualViewport</div>
+      <div>height: {window.visualViewport?.height}</div>
+      <div>height: {window.visualViewport?.offsetLeft}</div>
+      <div>height: {window.visualViewport?.offsetTop}</div>
+      <div>height: {window.visualViewport?.onresize}</div>
+      <div>height: {window.visualViewport?.onscroll}</div>
+      <div>height: {window.visualViewport?.onscrollend}</div>
+      <div>height: {window.visualViewport?.pageLeft}</div>
+      <div>height: {window.visualViewport?.pageTop}</div>
+      <div>height: {window.visualViewport?.scale}</div>
+      <div>height: {window.visualViewport?.width}</div>
       <div>
         <span>Авто:</span>
         <select name="drivers" id="CallPage-drivers" multiple value={selectedDriverIds} onChange={updateSelectedDrivers}>
