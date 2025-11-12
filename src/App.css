@@ -70,7 +70,7 @@
 .qwe2 {
   height: env(safe-area-inset-top);
   bottom: 0;
-  right: 40px;
+  right: 30px;
   background-color: green;
 }
 
