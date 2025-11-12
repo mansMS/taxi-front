@@ -78,7 +78,7 @@ div {
 
 :root {
   // --top-ind: var(env(safe-area-inset-top), 0);
-  --top-indent: env(safe-area-inset-top);
+  --top-indent: max(env(safe-area-inset-top), 16px);
 }
 
 html {

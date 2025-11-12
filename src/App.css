@@ -44,17 +44,14 @@
 #root {
   height: 100%;
   margin: 0;
+}
 
-  .App {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-
-    div:not(.qwe) {
-      background-color: rgba(98, 255, 0, 0.315);
-    }
-  }
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-top: var(--top-indent);
 }
 
 .qwe {
