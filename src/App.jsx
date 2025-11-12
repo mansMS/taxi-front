@@ -65,6 +65,8 @@ function App() {
     <div className='App'>
       <div className='qwe qwe1'></div>
       <div className='qwe qwe2'></div>
+      <div className='qwe qwe3' style={{ height: top_indent }}></div>
+      <div className='qwe qwe4' style={{ height: window.visualViewport?.height }}></div>
       <div>
         <span >Откуда:</span> <input value={fromRoute} onChange={updateFromRoute} /> <span>*</span>
       </div>
