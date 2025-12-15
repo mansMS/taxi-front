@@ -61,29 +61,41 @@
 }
 
 .qwe1 {
-  height: env(safe-area-inset-top);
-  top: env(safe-area-inset-top);
+  width: env(safe-area-top);
+  top: env(safe-area-top);
   right: 10px;
-  background-color: red;
+  background-color: rgb(112, 0, 0);
 }
 
 .qwe2 {
-  height: env(safe-area-inset-bottom);
-  bottom: env(safe-area-inset-bottom);
-  right: 30px;
-  background-color: rgb(251, 255, 0);
-}
-
-.qwe3 {
-  width: env(safe-area-top);
-  top: env(safe-area-top);
-  left: 50px;
+  height: env(safe-area-inset-top);
+  top: env(safe-area-inset-top);
+  right: 50px;
   background-color: rgb(170, 0, 255);
 }
 
+.qwe3 {
+  height: env(safe-area-bottom);
+  bottom: env(safe-area-bottom);
+  right: 10px;
+  background-color: rgb(251, 255, 0);
+}
+
 .qwe4 {
-  width: env(safe-area-inset-top);
+  width: env(safe-area-inset-bottom);
   top: env(safe-area-inset-bottom);
-  left: 70px;
+  right: 50px;
+  background-color: rgb(253, 144, 255);
+}
+
+.qwe5 {
+  top: 100px;
+  right: 70px;
+  background-color: rgb(251, 255, 0);
+}
+
+.qwe6 {
+  top: 100px;
+  right: 120px;
   background-color: rgb(253, 144, 255);
 }
