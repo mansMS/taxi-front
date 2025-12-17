@@ -82,15 +82,24 @@ div {
 }
 
 :root {
+  --sait: env(safe-area-inset-top);
+  --sair: env(safe-area-inset-right);
+  --saib: env(safe-area-inset-bottom);
+  --sail: env(safe-area-inset-left);
+
   --top-indent: max(env(safe-area-inset-top), 16px);
+  --main-background: #f2f4f7;
 }
 
 html {
-  background: red;
+  height: calc(100% + env(safe-area-inset-top));
+  background: rgb(255, 133, 40);
+  // background: var(--main-background);
 }
 
 body {
-  background: green;
+  // height: 100%;
+  background: rgb(0, 128, 0);
 }
 
 #root {

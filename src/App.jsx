@@ -1,9 +1,11 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './App.css'
 
 const App = () => {
   const [fromRoute, setFromRoute] = useState('')
   const [selectedDriverIds, setSelectedDriverIds] = useState([])
+
+  const AppRef = useRef(null);
 
   const drivers = [
     { id: 1, name: 'Паша', car: 'Merkedek', carNumber: '980', carColor: 'Белый' },
@@ -59,35 +61,43 @@ const App = () => {
 
   console.log('window.visualViewport', window.visualViewport)
   const top_indent = getComputedStyle(document.documentElement).getPropertyValue("--top-indent");
+  const sait = getComputedStyle(document.documentElement).getPropertyValue("--sait");
+  const saib = getComputedStyle(document.documentElement).getPropertyValue("--saib");
+  console.log('top_indent', top_indent)
+  console.log('sait', sait)
+  console.log('saib', saib)
 
   useEffect(() => {
-    document.body.style.height = `${window.visualViewport?.height}px`;
+    // AppRef.current.style.height = `${window.visualViewport?.height + parseInt(sait) + parseInt(saib)}px`;
+    // AppRef.current.style.height = `${window.visualViewport?.height}px`;
+    // AppRef.current.style.width = `${window.visualViewport?.width}px`;
+    console.log('qwe')
   }, []);
 
 
   return (
-    <div className='App'>
+    <div className='App' ref={AppRef}>
       <div className='qwe qwe1'></div>
       <div className='qwe qwe2'></div>
       <div className='qwe qwe3'></div>
       <div className='qwe qwe4'></div>
-      <div className='qwe qwe5' style={{ height: top_indent }}></div>
-      <div className='qwe qwe6' style={{ height: window.visualViewport?.height }}></div>
+      <div className='qwe qwe5'></div>
+      <div className='qwe qwe6'></div>
+      <div className='qwe qwe7' style={{ height: window.visualViewport?.height }}></div>
+      <div className='qwe qwe8'></div>
+      <div className='qwe qwe9'></div>
       <div>
         <span >Откуда:</span> <input value={fromRoute} onChange={updateFromRoute} /> <span>*</span>
       </div>
       <div>top_indent {top_indent}</div>
-      <div>visualViewport</div>
+      <div>visual1Viewport</div>
+      <div>visual2Viewport</div>
+      <div>visual3Viewport</div>
+      <div>visual4Viewport</div>
       <div>height: {window.visualViewport?.height}</div>
-      <div>height: {window.visualViewport?.offsetLeft}</div>
-      <div>height: {window.visualViewport?.offsetTop}</div>
-      <div>height: {window.visualViewport?.onresize}</div>
-      <div>height: {window.visualViewport?.onscroll}</div>
-      <div>height: {window.visualViewport?.onscrollend}</div>
-      <div>height: {window.visualViewport?.pageLeft}</div>
-      <div>height: {window.visualViewport?.pageTop}</div>
-      <div>height: {window.visualViewport?.scale}</div>
       <div>height: {window.visualViewport?.width}</div>
+      <div>sait: {sait}</div>
+      <div>saib: {saib}</div>
       <div>
         <span>Авто:</span>
         <select name="drivers" id="CallPage-drivers" multiple value={selectedDriverIds} onChange={updateSelectedDrivers}>
@@ -97,7 +107,7 @@ const App = () => {
       <div>
         <div>From route: <span>{fromRoute}</span></div>
         <div>Driver ids: <span>{selectedDriverIds}</span></div>
-        <div>Driver: {selectedDriverLabels.map((label, index) => <div key={index}>{label}</div>)}</div>
+        <div>Driver: {selectedDriverLabels.map((label, index) => <div key={index} className='driver'>{label}</div>)}</div>
       </div>
     </div>
   )

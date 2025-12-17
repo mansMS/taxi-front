@@ -1,101 +1,105 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */
-
-#root {
-  height: 100%;
-  margin: 0;
-}
-
 .App {
+  /* position: fixed;
+  inset: 0; */
+  position: absolute;
+  inset: 0;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
-  /* height: 100%; */
-  padding-top: var(--top-indent);
+  background: #a2bee9;
+  /* overflow: scroll; */
+  /* overscroll-behavior: contain; */
+}
+
+.AppChld {
+  background: var(--main-background);
+
 }
 
 .qwe {
   width: 20px;
-  /* min-height: 5px; */
   position: absolute;
 }
 
 .qwe1 {
-  width: env(safe-area-top);
-  top: env(safe-area-top);
-  right: 10px;
+  height: env(safe-area-inset-top);
+  top: 0;
+  right: 40px;
   background-color: rgb(112, 0, 0);
 }
 
 .qwe2 {
-  height: env(safe-area-inset-top);
-  top: env(safe-area-inset-top);
-  right: 50px;
+  height: env(safe-area-inset-bottom);
+  top: 0;
+  right: 60px;
   background-color: rgb(170, 0, 255);
 }
 
 .qwe3 {
-  height: env(safe-area-bottom);
-  bottom: env(safe-area-bottom);
+  width: 10px;
+  height: env(safe-area-inset-top);
+  top: env(safe-area-inset-top);
   right: 10px;
   background-color: rgb(251, 255, 0);
 }
 
 .qwe4 {
-  width: env(safe-area-inset-bottom);
+  width: 10px;
+  height: env(safe-area-inset-bottom);
   top: env(safe-area-inset-bottom);
   right: 50px;
   background-color: rgb(253, 144, 255);
 }
 
 .qwe5 {
-  top: 100px;
-  right: 70px;
-  background-color: rgb(251, 255, 0);
+  height: env(safe-area-inset-top);
+  bottom: 0;
+  right: 40px;
+  background-color: rgb(164, 166, 44);
 }
 
 .qwe6 {
-  top: 100px;
-  right: 120px;
-  background-color: rgb(253, 144, 255);
+  height: env(safe-area-inset-bottom);
+  bottom: 0;
+  right: 60px;
+  background-color: rgb(172, 91, 173);
+}
+
+/* .qwe8 {
+  height: env(safe-area-inset-top);
+  bottom: calc(env(safe-area-inset-top) * -1);
+  right: 140px;
+  background-color: rgb(164, 166, 44);
+}
+
+.qwe9 {
+  height: env(safe-area-inset-bottom);
+  bottom: calc(env(safe-area-inset-bottom) * -1);
+  right: 160px;
+  background-color: rgb(172, 91, 173);
+} */
+
+.qwe7 {
+  width: 10px;
+  top: 0;
+  left: 50px;
+  background-color: rgb(172, 91, 173);
+}
+
+.driver {
+  margin: 40px;
+}
+
+.web {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  width: 100vw;
+  height: 48px;
+}
+
+.web2 {
+  background-color: greenyellow;
+  height: 100vh;
 }
